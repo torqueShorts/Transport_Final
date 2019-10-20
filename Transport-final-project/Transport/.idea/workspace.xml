@@ -33,9 +33,9 @@
       <list>
         <option value="FxmlFile" />
         <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -54,7 +54,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558392162259" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="C:/CarRentalAgency/CarRentalAgency" />
+    <property name="last_opened_file_path" value="C:/Domain-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -205,7 +205,7 @@
       <workItem from="1558083226198" duration="57282000" />
       <workItem from="1569144114340" duration="16754000" />
       <workItem from="1571344266620" duration="7590000" />
-      <workItem from="1571483307833" duration="21492000" />
+      <workItem from="1571483307833" duration="45674000" />
     </task>
     <servers />
   </component>

@@ -3,9 +3,9 @@ package Transport.Controller;
 import java.util.List;
 import java.util.Optional;
 
-import Transport.Domain.Employee;
+import Transport.Domain.DriverNew;
 import Transport.Exception.RecordNotFoundException;
-import Transport.Service.EmployeeService;
+import Transport.Service.DriverNewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,18 +16,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
-public class EmployeeController
+public class DriverNewController
 {
     @Autowired
-    EmployeeService service;
+    DriverNewService service;
 
     @RequestMapping
     public String getAllEmployees(Model model)
     {
-        List<Employee> list = service.getAllEmployees();
+        List<DriverNew> list = service.getAllEmployees();
 
         model.addAttribute("employees", list);
-        return "employee-list";
+        return "driver-list";
     }
 
     @RequestMapping(path = {"/edit", "/edit/{id}"})
@@ -35,12 +35,12 @@ public class EmployeeController
             throws RecordNotFoundException
     {
         if (id.isPresent()) {
-            Employee entity = service.getEmployeeById(id.get());
+            DriverNew entity = service.getEmployeeById(id.get());
             model.addAttribute("employee", entity);
         } else {
-            model.addAttribute("employee", new Employee());
+            model.addAttribute("employee", new DriverNew());
         }
-        return "create-employee";
+        return "create-driver";
     }
 
     @RequestMapping(path = "/delete/{id}")
@@ -52,7 +52,7 @@ public class EmployeeController
     }
 
     @RequestMapping(path = "/createEmployee", method = RequestMethod.POST)
-    public String createOrUpdateEmployee(Employee employee)
+    public String createOrUpdateEmployee(DriverNew employee)
     {
         service.createOrUpdateEmployee(employee);
         return "redirect:/";

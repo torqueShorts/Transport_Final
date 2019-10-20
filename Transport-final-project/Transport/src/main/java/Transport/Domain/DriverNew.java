@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TBL_EMPLOYEES")
-public class Employee {
+@Table(name="Drivers_Table")
+public class DriverNew {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +21,8 @@ public class Employee {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="phone_number", nullable=true)
-    private int phoneNumber;
+    @Column(name="phone_number", nullable=false)
+    private String phoneNumber;
 
     public Long getId() {
         return id;
@@ -36,24 +36,24 @@ public class Employee {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
 
-    public String getLastName() {
-        return lastName;
-    }
+        public String getLastName() {
+            return lastName;
+        }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
+        public String getPhoneNumber() {
+            return phoneNumber;
+        }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        public void setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
     }
 
     @Override

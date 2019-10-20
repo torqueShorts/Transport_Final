@@ -4,33 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import Transport.Domain.Employee;
+import Transport.Domain.DriverNew;
 import Transport.Exception.RecordNotFoundException;
-import Transport.Repository.Repositories.EmployeeRepo;
+import Transport.Repository.Repositories.DriverNewRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class EmployeeService {
+public class DriverNewService {
 
     @Autowired
-    EmployeeRepo repository;
+    DriverNewRepo repository;
 
-    public List<Employee> getAllEmployees()
+    public List<DriverNew> getAllEmployees()
     {
-        List<Employee> result = (List<Employee>) repository.findAll();
+        List<DriverNew> result = (List<DriverNew>) repository.findAll();
 
         if(result.size() > 0) {
             return result;
         } else {
-            return new ArrayList<Employee>();
+            return new ArrayList<DriverNew>();
         }
     }
 
-    public Employee getEmployeeById(Long id) throws RecordNotFoundException
+    public DriverNew getEmployeeById(Long id) throws RecordNotFoundException
     {
-        Optional<Employee> employee = repository.findById(id);
+        Optional<DriverNew> employee = repository.findById(id);
 
         if(employee.isPresent()) {
             return employee.get();
@@ -39,7 +39,7 @@ public class EmployeeService {
         }
     }
 
-    public Employee createOrUpdateEmployee(Employee entity)
+    public DriverNew createOrUpdateEmployee(DriverNew entity)
     {
         if(entity.getId()  == null)
         {
@@ -49,11 +49,11 @@ public class EmployeeService {
         }
         else
         {
-            Optional<Employee> employee = repository.findById(entity.getId());
+            Optional<DriverNew> employee = repository.findById(entity.getId());
 
             if(employee.isPresent())
             {
-                Employee newEntity = employee.get();
+                DriverNew newEntity = employee.get();
                 newEntity.setPhoneNumber(entity.getPhoneNumber());
                 newEntity.setFirstName(entity.getFirstName());
                 newEntity.setLastName(entity.getLastName());
@@ -71,7 +71,7 @@ public class EmployeeService {
 
     public void deleteEmployeeById(Long id) throws RecordNotFoundException
     {
-        Optional<Employee> employee = repository.findById(id);
+        Optional<DriverNew> employee = repository.findById(id);
 
         if(employee.isPresent())
         {

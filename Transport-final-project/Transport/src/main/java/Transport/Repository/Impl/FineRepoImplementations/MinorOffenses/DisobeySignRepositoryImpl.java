@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 
-@Repository("DisobeySignRepo")
+
 public class DisobeySignRepositoryImpl implements DisobeySignRepository
 {
 

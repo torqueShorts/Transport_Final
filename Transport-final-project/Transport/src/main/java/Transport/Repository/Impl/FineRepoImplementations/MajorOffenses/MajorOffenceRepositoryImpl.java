@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
-@Repository("MajorOffenseRepo")
+
 public class MajorOffenceRepositoryImpl implements MajorOffenceRepository
 {
 

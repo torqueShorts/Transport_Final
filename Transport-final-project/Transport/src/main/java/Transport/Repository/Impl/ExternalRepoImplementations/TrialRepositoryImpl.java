@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 
-@Repository("TrialRepo")
+
 public class TrialRepositoryImpl implements TrialRepository
 {
 

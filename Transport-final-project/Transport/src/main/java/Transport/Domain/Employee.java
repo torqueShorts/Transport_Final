@@ -21,8 +21,8 @@ public class Employee {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="email", nullable=false, length=200)
-    private String email;
+    @Column(name="phone_number", nullable=true)
+    private int phoneNumber;
 
     public Long getId() {
         return id;
@@ -48,17 +48,17 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public int getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
     public String toString() {
         return "Employee [id=" + id + ", firstName=" + firstName +
-                ", lastName=" + lastName + ", email=" + email   + "]";
+                ", lastName=" + lastName + ", phoneNumber=" + phoneNumber   + "]";
     }
 }

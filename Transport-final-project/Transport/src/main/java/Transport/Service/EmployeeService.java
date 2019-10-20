@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import Transport.Domain.Employee;
-import Exception.RecordNotFoundException;
+import Transport.Exception.RecordNotFoundException;
 import Transport.Repository.Repositories.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,7 +54,7 @@ public class EmployeeService {
             if(employee.isPresent())
             {
                 Employee newEntity = employee.get();
-                newEntity.setEmail(entity.getEmail());
+                newEntity.setPhoneNumber(entity.getPhoneNumber());
                 newEntity.setFirstName(entity.getFirstName());
                 newEntity.setLastName(entity.getLastName());
 

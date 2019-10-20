@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
-@Repository("MinorOffenseRepo")
+
 public class MinorOffenceRepositoryImpl implements MinorOffenceRepository {
 
     private static MinorOffenceRepositoryImpl repo = null;

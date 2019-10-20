@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 
-@Repository("OverSpeedLimitLowRepo")
+
 public class OverSpeedLimitLowRepositoryImpl implements OverSpeedLimitLowRepository
 {
 

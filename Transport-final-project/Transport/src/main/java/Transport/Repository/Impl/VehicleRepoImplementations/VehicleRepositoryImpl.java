@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 
-@Repository("VehicleRepo")
+
 public class VehicleRepositoryImpl implements VehicleRepository {
 
     private static VehicleRepositoryImpl repo;

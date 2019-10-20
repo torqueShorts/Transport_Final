@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 
-@Repository("HeavyDutyRepo")
+
 public class HeavyDutyRepositoryImpl implements HeavyDutyRepository
 {
 
